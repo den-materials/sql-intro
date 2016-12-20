@@ -1,4 +1,4 @@
----
+<!---
 title: SQL Setup, Insert, Update, and Delete
 type: lesson
 duration: "1:25"
@@ -6,15 +6,19 @@ creator:
     name: Jay Nappy
     city: NYC
 competencies: Databases
----
+--->
+
+<!--9:40 10 minutes -->
+
+<!--Hook: Remember when we talked about how MongoDB was the 5th most popular Database?  Do you remember what the 1st, 2nd, 3rd, and 4th were all versions of?  That's right, SQL.  Today, we're going to talk about SQL.  Before we go on, it's worthwhile to mention that MongoDB defines itself explicity as noSQL, that is, the system we are about to learn for saving data is very different from Mongo.  While Mongo was defined by BSON, or Binary JSON, SQL organizes data into tables, rows, and columns.  OK, let's jump into it. -->
 
 # SQL Setup, Insert, Update and Delete
 
 ### Objectives
 *After this lesson, students will be able to:*
 
-- Create a database table
-- Insert, retrieve, update, and delete a row or rows into a database table
+- **Create** a database table
+- **Insert, retrieve, update, and delete** a row or rows into a database table
 
 ### Preparation
 *Before this lesson, students should already be able to:*
@@ -22,16 +26,16 @@ competencies: Databases
 - Install **[PostgreSQL](http://www.postgresql.org/)**
 - Describe the relationship between tables, rows, and columns
 - Draw an ERD diagram
-- Explain the difference between table relationships
 
+## We know about Databases, but what is SQL? Intro
 
-## We know about Databases, but what is SQL? Intro (10 mins)
-
-Let's review: at it's simplest, a relational database is a mechanism to store and retrieve data in a tabular form.  Spreadsheets are a good analogy!  But how do we interact with our database: inserting data, updating data, retrieving data, and deleting data? That's where SQL comes in!
+Let's review: at its simplest, a relational database is a mechanism to store and retrieve data in a tabular form.  Spreadsheets are a good analogy!  But how do we interact with our database: inserting data, updating data, retrieving data, and deleting data? That's where SQL comes in!
 
 #### What is SQL?
 
 SQL stands for Structured Query Language, and it is a language universally used and adapted to interact with relational databases.  When you use a SQL client and connect to a relational database that contains tables with data, the scope of what you can do with SQL commands includes:
+
+<!--Have developer read aloud -->
 
 - Inserting data
 - Querying or retrieving data
@@ -51,10 +55,11 @@ Well, a database is just a repository to store the data and you need to use syst
 
 ...and all of these management systems use SQL (or some adaptation of it) as a language to manage data in the system.
 
+<!--9:50 10 minutes -->
 
-## Connect, Create a Database - Codealong (10 mins)
+## Connect, Create a Database - Codealong
 
-Let's make a database!  First, make sure you have PostgreSQL running.  Once you do, open your terminal and type:
+Let's make a database!  Open your terminal and type:
 
 ```bash
 $ psql
@@ -66,7 +71,9 @@ You should see something like:
 your_user_name=#
 ```
 
-Great! You've entered the PostgreSQL equivalent of IRB: now, you can execute PSQL commands, or PostgreSQL's version of SQL.
+>Note: If you get an error about a `Library not loaded`, you may need to reinstall `postresql` with the following command `brew reinstall postgresql`.
+
+Great! You've entered the PostgreSQL equivalent of the node REPL: now, you can execute PSQL commands, or PostgreSQL's version of SQL.
 
 Let's use these commands, but before we can, we must create a database.  Let's call it wdi:
 
@@ -85,7 +92,9 @@ You are now connected to database "wdi" as user "your_user_name".
 wdi=#
 ```
 
-## Create a table - Demo (10 mins)
+<!--10:00 10 minutes -->
+
+## Create a table - Demo
 
 Now that we have a database, let's create a table (think of this like, "hey now that we have a workbook/worksheet, let's block off these cells with a border and labels to show it's a unique set of values"):
 
@@ -124,7 +133,11 @@ wdi(#  NAME      TEXT                NOT NULL,
 
 ...then, each line after denotes a new column we're going to create for this table, what the column will be called, the data type, whether it's a primary key, and whether the database - when data is added - can allow data without missing values.  In this case, we're not allowing NAME, AGE, or ID to be blank; but we're ok with website being blank.
 
-## Create a student table and insert data - Codealong (10mins)
+<!--What does this remind you of from Mongo?  Schema! -->
+
+<!--10:10 10 minutes -->
+
+## Create a student table and insert data - Independent Practice
 
 Now that we've done it to keep track of our instructors, let's create a table for students that collects information about:
 
@@ -135,7 +148,7 @@ Now that we've done it to keep track of our instructors, let's create a table fo
 
 Remembering the commands we just went over, students, try to guide the instructors through this!  
 
-Here's what that query should have looked like:
+<!-- show solution after 5 minutes:
 
 ```sql
 CREATE TABLE students (
@@ -145,8 +158,9 @@ CREATE TABLE students (
   ADDRESS CHAR(50)
 );
 ```
+-->
 
-In psql that will look like:
+<!-- In psql that will look like:
 
 ```psql
 wdi=# CREATE TABLE students (
@@ -157,6 +171,8 @@ wdi(#  ADDRESS     CHAR(50)
 wdi(#  );
 CREATE TABLE
 ```
+-->
+
 Great job! Now let's finally _insert_ some data into that table - remember what cannot be left blank!
 
 We'll insert five students, Jack, Jill, John, Jackie, and Slagathorn. The syntax is as follows:
@@ -177,7 +193,9 @@ wdi=# INSERT INTO students VALUES (1, 'Jack Sparrow', 28, '50 Main St, New York,
 INSERT 0 1
 ```
 
-## Insert Data - Independent Practice (10 mins)
+<!--10:20 10 minutes -->
+
+## Insert Data - Independent Practice
 
 Now, you try it for the other students, and pay attention to the order of Jack's parameters and the single quotes - they both matter.
 
@@ -186,7 +204,7 @@ Now, you try it for the other students, and pay attention to the order of Jack's
 - Jackie's full name is Jackie Lackie; she's 101 years old, and lives at 2 OldForThis Ct, Fivetowns, NY
 - Slagathorn's full name is Slaggy McRaggy; he's 28 and prefers not to list his address
 
-You should come up with:
+<!-- after 8 minutes, show this:
 
 ```sql
 INSERT INTO students VALUES (2, 'Jilly Cakes', 30, '123 Webdev Dr. Boston, MA');
@@ -207,9 +225,11 @@ INSERT 0 1
 wdi=# INSERT INTO students VALUES (5, 'Slaggy McRaggy', 28);
 INSERT 0 1
 ```
+-->
 
+<!--10:30 15 minutes -->
 
-## What's in our database? Code Along -  (15 mins)
+## What's in our database? Catch-up
 
 So now that we have this data saved, we're going to need to access it at some point, right?  We're going to want to _select_ particular data points in our dataset provided certain conditions.  The PostgreSQL SELECT statement is used to fetch the data from a database table which returns data in the form of result table. These result tables are called result-sets. The syntax is just what you would have guessed:
 
@@ -252,7 +272,7 @@ wdi=# SELECT name, age FROM students;
 
 #### Getting more specific
 
-Just like Ruby or JavaScript, all of our comparison and boolean operators can do work for us to select more specific data.
+Just like JavaScript, all of our comparison and boolean operators can do work for us to select more specific data.
 
 - I want the names of all the students who aren't dinosaurs - done:
 
@@ -306,9 +326,9 @@ wdi=# SELECT * FROM students WHERE address LIKE '%Fivetowns%';
 (2 rows)
 ```
 
+<!--10:45 10 minutes -->
 
-
-## Updates to our database - Codealong (5 mins)
+## Updates to our database - Catchup
 
 Ok, there are some mistakes we've made to our database, but that's cool, cause we can totally update it or delete information we don't like. Let's start by adding one more student:
 
@@ -353,7 +373,9 @@ wdi=# SELECT * FROM students;
 
 ```
 
-## Independent Practice - 10 mins
+<!--10:55 10 minutes -->
+
+## Independent Practice
 
 There's _no way_ you're going to remember the exact syntax of everything we just did, but let's practice a habit you should have been doing since week 1: finding and reading documentation. Checkout [this PostgreSQL tutorial](http://www.tutorialspoint.com/postgresql/) and using the same database and datatable of users, get through a many of these SQL challenges as possible in the next 10 minutes:
 
@@ -369,23 +391,9 @@ There's _no way_ you're going to remember the exact syntax of everything we just
 - Get a list of students whose first name begins with the letter "J"
 - Get a list of student names who live in NY or MA
 
-## Conclusion - 5 minutes
+<!--11:05 5 minutes -->
 
-When we finally hook our apps up to databases - especially with Rails - we will have a whole slew of shortcuts we can use to get the data we need? So, wait, why the heck are we practicing SQL?  Well, let's look at what happens when you call for a particular user from a users table - with some nifty methods - in a Rails environment when you're connected to a database:
-
-```ruby  
-User.last
-  User Load (1.5ms)  SELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1
-=> #<User id: 1, first_name: "jay", last_name: "nappy"...rest of object >
-```
-
-There's SQL!!!
-
-```SQL
-SELECT  "users".* FROM "users"   ORDER BY "users"."id" DESC LIMIT 1
-```
-
-The Ruby/Rails scripts get converted to raw SQL before querying the database.  You'll know the underlying concepts and query language for how the data you ask for gets returned to you.
+## Conclusion
 
 #### Common Postgresql Commands
 
@@ -403,6 +411,3 @@ Answer these questions:
 
 - How does SQL relate to relational databases?
 - What kinds of boolean and conditional operators can we use in SQL?
-
-
-
