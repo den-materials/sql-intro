@@ -217,7 +217,7 @@ Now, you try it for the other students, and pay attention to the order of Jack's
 INSERT INTO students VALUES (2, 'Jilly Cakes', 30, '123 Webdev Dr. Boston, MA');
 INSERT INTO students VALUES (3, 'Johnny Bananas', 25, '555 Five St, Fivetowns, NY');
 INSERT INTO students VALUES (4, 'Jackie Lackie', 101, '2 OldForThis Ct, Fivetowns, NY');
-INSERT INTO students VALUES (5, 'Slaggy McRaggy', 28);
+INSERT INTO students VALUES (5, 'Slaggy McRaggy', null, '123 Street St, Denver, NY');
 ```
 
 In psql this should look like:
@@ -259,7 +259,7 @@ wdi=# SELECT * FROM students;
   2 | Jilly Cakes    |  30 | 123 Webdev Dr. Boston, MA
   3 | Johnny Bananas |  25 | 555 Five St, Fivetowns, NY
   4 | Jackie Lackie  | 101 | 2 OldForThis Ct, Fivetowns, NY
-  5 | Slaggy McRaggy |  28 |
+  5 | Slaggy McRaggy |     | 123 Street St, Denver, NY
 (5 rows)
 ```
 
@@ -273,7 +273,7 @@ wdi=# SELECT name, age FROM students;
  Jilly Cakes    |  30
  Johnny Bananas |  25
  Jackie Lackie  | 101
- Slaggy McRaggy |  28
+ Slaggy McRaggy |  
 (5 rows)
 ```
 
@@ -290,8 +290,7 @@ wdi=# SELECT name FROM students WHERE age < 100;
  Jack Sparrow
  Jilly Cakes
  Johnny Bananas
- Slaggy McRaggy
-(4 rows)
+(3 rows)
 ```
 
 - How about the names of students ordered by age? Done:
@@ -302,9 +301,9 @@ wdi=# SELECT name, age FROM students ORDER BY age;
 ----------------+-----
  Johnny Bananas |  25
  Jack Sparrow   |  28
- Slaggy McRaggy |  28
  Jilly Cakes    |  30
  Jackie Lackie  | 101
+ Slaggy McRaggy |   
 (5 rows)
 ```
 
@@ -314,10 +313,10 @@ wdi=# SELECT name, age FROM students ORDER BY age;
 wdi=# SELECT name, age FROM students ORDER BY age DESC;
       name      | age
 ----------------+-----
+ Slaggy McRaggy |  
  Jackie Lackie  | 101
  Jilly Cakes    |  30
  Jack Sparrow   |  28
- Slaggy McRaggy |  28
  Johnny Bananas |  25
 (5 rows)
 ```
@@ -357,7 +356,7 @@ wdi=# SELECT * FROM students;
   2 | Jilly Cakes    |  30 | 123 Webdev Dr. Boston, MA
   3 | Johnny Bananas |  25 | 555 Five St, Fivetowns, NY
   4 | Jackie Lackie  | 101 | 2 OldForThis Ct, Fivetowns, NY
-  5 | Slaggy McRaggy |  28 |
+  5 | Slaggy McRaggy |     | 123 Street St, Denver, NY
   6 | Miss Take      | 500 | 100 Main St., New York, NY
 (6 rows)
 ```
@@ -375,7 +374,7 @@ wdi=# SELECT * FROM students;
   2 | Jilly Cakes    |  30 | 123 Webdev Dr. Boston, MA
   3 | Johnny Bananas |  25 | 555 Five St, Fivetowns, NY
   4 | Jackie Lackie  | 101 | 2 OldForThis Ct, Fivetowns, NY
-  5 | Slaggy McRaggy |  28 |
+  5 | Slaggy McRaggy |     | 123 Street St, Denver, NY
 (5 rows)
 
 ```
@@ -389,8 +388,8 @@ There's _no way_ you're going to remember the exact syntax of everything we just
 - Insert five more students:
   - Nancy Gong is 40 and lives at 200 Horton Ave., Lynbrook, NY
   - Laura Rossi is 70 and listed her address as "Unlisted"
-  - David Daniele is 28 and lives at 300 Dannington Ln., Washington, DC.
-  - Greg Fitzgerald is 25 and did not list an address
+  - David Daniele is 28 and lives at 300 Dannington Ln., Washington, DC
+  - Greg Fitzgerald lives at 4000 Pennsylvania Ave., Pittsburgh, PA and did not list an age
   - Randi Fitz is 28 and lives in Oceanside, NY
 
 - Randi wants her address to be corrected to 25 Broadway, New York, NY
