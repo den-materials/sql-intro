@@ -19,7 +19,7 @@ ADDRESS     CHAR(50)
 INSERT INTO students VALUES (2, 'Jilly Cakes', 30, '123 Webdev Dr. Boston, MA');
 INSERT INTO students VALUES (3, 'Johnny Bananas', 25, '555 Five St, Fivetowns, NY');
 INSERT INTO students VALUES (4, 'Jackie Lackie', 101, '2 OldForThis Ct, Fivetowns, NY');
-INSERT INTO students VALUES (5, 'Slaggy McRaggy', 28);
+INSERT INTO students VALUES (5, 'Slaggy McRaggy', null, '123 Street Street, Denver, NY');
 
 
 -- Final Independent Practice
@@ -31,7 +31,7 @@ INSERT INTO students VALUES (7, 'Laura Rossi', 70, 'Unlisted');
 --   - David Daniele is 28 and lives at 300 Dannington Ln., Washington, DC.
 INSERT INTO students VALUES (8, 'David Daniel', 28, '300 Dannington Ln., Washinton, DC.');
 --   - Greg Fitzgerald is 25 and did not list an address
-INSERT INTO students VALUES (9, 'Greg Fitzgerald', 25);
+INSERT INTO students VALUES (9, 'Greg Fitzgerald', null, '4000 Pennsylvania Ave., Pittsburgh, PA');
 --   - Randi Fitz is 28 and lives in Oceanside, NY
 INSERT INTO students VALUES (10, 'Randi Fitz', 28, 'Oceanside, NY');
 
