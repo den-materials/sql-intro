@@ -73,6 +73,8 @@ your_user_name=#
 
 >Note: If you get an error about a `Library not loaded`, you may need to reinstall `postresql` with the following command `brew reinstall postgresql`.
 
+>Note: If you get an error about the `server running locally and accepting connections`, you may need to manually start `postgresql` with the following command: `postgres -D /usr/local/var/postgres`. (Think `mongod`, so you may need to start a new tab to continue with this lesson.)
+
 Great! You've entered the PostgreSQL equivalent of the node REPL: now, you can execute PSQL commands, or PostgreSQL's version of SQL.
 
 Let's use these commands, but before we can, we must create a database.  Let's call it wdi:
@@ -146,7 +148,7 @@ Now that we've done it to keep track of our instructors, let's create a table fo
 - their age
 - and their address that cannot be left blank.
 
-Remembering the commands we just went over, students, try to guide the instructors through this!  
+Remembering the commands we just went over, try to type this out on your own.
 
 <!-- show solution after 5 minutes:
 
@@ -373,11 +375,11 @@ wdi=# SELECT * FROM students;
 
 ```
 
-<!--10:55 10 minutes -->
+<!--10:55 15 minutes -->
 
 ## Independent Practice
 
-There's _no way_ you're going to remember the exact syntax of everything we just did, but let's practice a habit you should have been doing since week 1: finding and reading documentation. Checkout [this PostgreSQL tutorial](http://www.tutorialspoint.com/postgresql/) and using the same database and datatable of users, get through a many of these SQL challenges as possible in the next 10 minutes:
+There's _no way_ you're going to remember the exact syntax of everything we just did, but let's practice a habit you should have been doing since week 1: finding and reading documentation. Checkout [this PostgreSQL tutorial](http://www.tutorialspoint.com/postgresql/) and using the same database and datatable of users, get through a many of these SQL challenges as possible in the next 15 minutes:
 
 - Insert five more students:
   - Nancy Gong is 40 and lives at 200 Horton Ave., Lynbrook, NY
@@ -391,7 +393,7 @@ There's _no way_ you're going to remember the exact syntax of everything we just
 - Get a list of students whose first name begins with the letter "J"
 - Get a list of student names who live in NY or MA
 
-<!--11:05 5 minutes -->
+<!--11:10 5 minutes -->
 
 ## Conclusion
 
@@ -405,7 +407,6 @@ Here are a list of some common Postgresql commands that you might need:
 - `\d+`
 - `\q`
 - `\h` - help
-
 
 Answer these questions:
 
