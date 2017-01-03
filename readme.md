@@ -56,6 +56,7 @@ Well, a database is just a repository to store the data and you need to use syst
 ...and all of these management systems use SQL (or some adaptation of it) as a language to manage data in the system.
 
 <!--9:50 10 minutes -->
+<!-- Actually 9:50 -->
 
 ## Connect, Create a Database - Codealong
 
@@ -64,6 +65,8 @@ Let's make a database!  Open your terminal and type:
 ```bash
 $ psql
 ```
+
+<!--Debugging issues probably took 10 minutes longer than I thought it would -->
 
 You should see something like:
 
@@ -141,6 +144,8 @@ wdi(#  NAME      TEXT                NOT NULL,
 
 ## Create a student table and insert data - Independent Practice
 
+<!--Actually 10:25 after kicking it to students -->
+
 Now that we've done it to keep track of our instructors, let's create a table for students that collects information about:
 
 - an id that cannot be left blank
@@ -156,8 +161,8 @@ Remembering the commands we just went over, try to type this out on your own.
 CREATE TABLE students (
   ID INT PRIMARY KEY NOT NULL,
   NAME TEXT NOT NULL,
-  AGE INT NOT NULL,
-  ADDRESS CHAR(50)
+  AGE INT,
+  ADDRESS CHAR(50) NOT NULL
 );
 ```
 -->
@@ -204,7 +209,7 @@ Now, you try it for the other students, and pay attention to the order of Jack's
 - Jill's full name is Jilly Cakes; she's 30 years old, and lives at 123 Webdev Dr. Boston, MA
 - Johns's full name is Johnny Bananas; he's 25 years old, and lives at 555 Five St, Fivetowns, NY
 - Jackie's full name is Jackie Lackie; she's 101 years old, and lives at 2 OldForThis Ct, Fivetowns, NY
-- Slagathorn's full name is Slaggy McRaggy; he's 28 and prefers not to list his address
+- Slagathorn's full name is Slaggy McRaggy; he's 28 and prefers not to list his age
 
 <!-- after 8 minutes, show this:
 
@@ -224,7 +229,7 @@ wdi=# INSERT INTO students VALUES (3, 'Johnny Bananas', 25, '555 Five St, Fiveto
 INSERT 0 1
 wdi=# INSERT INTO students VALUES (4, 'Jackie Lackie', 101, '2 OldForThis Ct, Fivetowns, NY');
 INSERT 0 1
-wdi=# INSERT INTO students VALUES (5, 'Slaggy McRaggy', 28);
+wdi=# INSERT INTO students VALUES (5, 'Slaggy McRaggy', null, '123 Street St, Denver, NY');
 INSERT 0 1
 ```
 -->
