@@ -209,7 +209,7 @@ Now, you try it for the other students, and pay attention to the order of Jack's
 - Jill's full name is Jilly Cakes; she's 30 years old, and lives at 123 Webdev Dr. Boston, MA
 - Johns's full name is Johnny Bananas; he's 25 years old, and lives at 555 Five St, Fivetowns, NY
 - Jackie's full name is Jackie Lackie; she's 101 years old, and lives at 2 OldForThis Ct, Fivetowns, NY
-- Slagathorn's full name is Slaggy McRaggy; he's 28 and prefers not to list his age
+- Slagathorn's full name is Slaggy McRaggy; he lives at 123 Street St, Denver, NY, but prefers not to list his age
 
 <!-- after 8 minutes, show this:
 
