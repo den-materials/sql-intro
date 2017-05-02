@@ -346,7 +346,7 @@ INSERT 0 1
 But oh no, we messed them up - Miss Take doesn't live at asdfasdfasdf, she lives at 100 Main St., New York, NY.  Let's fix it:  
 
 ```psql
-wdi=# UPDATE students SET address = '100 Main St., New York, NY' where address = 'asdfasdfasdf';
+wdi=# UPDATE students SET address = '100 Main St., New York, NY' WHERE address = 'asdfasdfasdf';
 UPDATE 1
 
 wdi=# SELECT * FROM students;
@@ -361,7 +361,7 @@ wdi=# SELECT * FROM students;
 (6 rows)
 ```
 
-But wait, actually, she just cancelled - no big!
+But wait, actually, she just cancelled - no problem!
 
 ```psql
 wdi=# DELETE FROM students where name = 'Miss Take';
@@ -383,7 +383,7 @@ wdi=# SELECT * FROM students;
 
 ## Independent Practice
 
-There's _no way_ you're going to remember the exact syntax of everything we just did, but let's practice a habit you should have been doing since week 1: finding and reading documentation. Checkout [this PostgreSQL tutorial](http://www.tutorialspoint.com/postgresql/) and using the same database and datatable of users, get through a many of these SQL challenges as possible in the next 15 minutes:
+There's _no way_ you're going to remember the exact syntax of everything we just did, but let's practice a habit we have been preaching since week 1: finding and reading documentation. Checkout [this PostgreSQL tutorial](http://www.tutorialspoint.com/postgresql/) and using the same database and datatable of users, get through as many of these SQL challenges as possible in the next 15 minutes:
 
 - Insert five more students:
   - Nancy Gong is 40 and lives at 200 Horton Ave., Lynbrook, NY
