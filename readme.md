@@ -8,6 +8,7 @@ creator:
 competencies: Databases
 --->
 
+<!--9:51 WDI3 -->
 <!--9:40 10 minutes -->
 
 <!--Hook: Remember when we talked about how MongoDB was the 5th most popular Database?  Do you remember what the 1st, 2nd, 3rd, and 4th were all versions of?  That's right, SQL.  Today, we're going to talk about SQL.  Before we go on, it's worthwhile to mention that MongoDB defines itself explicity as noSQL, that is, the system we are about to learn for saving data is very different from Mongo.  While Mongo was defined by BSON, or Binary JSON, SQL organizes data into tables, rows, and columns.  OK, let's jump into it. -->
@@ -55,6 +56,7 @@ Well, a database is just a repository to store the data and you need to use syst
 
 ...and all of these management systems use SQL (or some adaptation of it) as a language to manage data in the system.
 
+<!--9:59 WDI3 -->
 <!--9:50 10 minutes -->
 <!-- Actually 9:50 -->
 
@@ -97,6 +99,7 @@ You are now connected to database "wdi" as user "your_user_name".
 wdi=#
 ```
 
+<!--10:10 WDI3 -->
 <!--10:00 10 minutes -->
 
 ## Create a table - Demo
@@ -144,6 +147,7 @@ wdi(#  NAME      TEXT                NOT NULL,
 
 ## Create a student table and insert data - Independent Practice
 
+<!--10:17 WDI3 turning over to students -->
 <!--Actually 10:25 after kicking it to students -->
 
 Now that we've done it to keep track of our instructors, let's create a table for students that collects information about:
@@ -180,6 +184,8 @@ CREATE TABLE
 ```
 -->
 
+<!--10:24 WDI3 -->
+
 Great job! Now let's finally _insert_ some data into that table - remember what cannot be left blank!
 
 We'll insert five students, Jack, Jill, John, Jackie, and Slagathorn. The syntax is as follows:
@@ -200,6 +206,7 @@ wdi=# INSERT INTO students VALUES (1, 'Jack Sparrow', 28, '50 Main St, New York,
 INSERT 0 1
 ```
 
+<!--WDI3 10:29 -->
 <!--10:20 10 minutes -->
 
 ## Insert Data - Independent Practice
@@ -234,6 +241,7 @@ INSERT 0 1
 ```
 -->
 
+<!--10:40 after solution WDI3 -->
 <!--10:30 15 minutes -->
 
 ## What's in our database? Catch-up
@@ -276,6 +284,8 @@ wdi=# SELECT name, age FROM students;
  Slaggy McRaggy |  
 (5 rows)
 ```
+
+<!--10:47 WDI3 -->
 
 #### Getting more specific
 
@@ -332,6 +342,7 @@ wdi=# SELECT * FROM students WHERE address LIKE '%Fivetowns%';
 (2 rows)
 ```
 
+<!--10:56 WDI3 -->
 <!--10:45 10 minutes -->
 
 ## Updates to our database - Catchup
@@ -379,6 +390,7 @@ wdi=# SELECT * FROM students;
 
 ```
 
+<!--11:04 WDI3, 11:06 to devs -->
 <!--10:55 15 minutes -->
 
 ## Independent Practice
@@ -416,3 +428,5 @@ Answer these questions:
 
 - How does SQL relate to relational databases?
 - What kinds of boolean and conditional operators can we use in SQL?
+
+<!--11:20 WDI3 -->
