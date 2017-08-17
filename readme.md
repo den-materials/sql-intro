@@ -80,6 +80,8 @@ your_user_name=#
 
 >Note: If you get an error about the `server running locally and accepting connections`, you may need to manually start `postgresql` with the following command: `postgres -D /usr/local/var/postgres`. (Think `mongod`, so you may need to start a new tab to continue with this lesson.)
 
+>Note: If running the above command gives you an error complaining about `database files are incompatible with the server` or similar, you may want to check out [this link](https://gist.github.com/giannisp/b53a76047b07751ed3ade3c1db1d2c51).
+
 Great! You've entered the PostgreSQL equivalent of the node REPL: now, you can execute PSQL commands, or PostgreSQL's version of SQL.
 
 Let's use these commands, but before we can, we must create a database.  Let's call it wdi:
