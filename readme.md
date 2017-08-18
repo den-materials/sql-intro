@@ -9,6 +9,8 @@ competencies: Databases
 --->
 
 <!--9:51 WDI3 -->
+<!--9:44 WDI4, lots of psql errors to quash, 9:59 to get back to this -->
+
 <!--9:40 10 minutes -->
 
 <!--Hook: Remember when we talked about how MongoDB was the 5th most popular Database?  Do you remember what the 1st, 2nd, 3rd, and 4th were all versions of?  That's right, SQL.  Today, we're going to talk about SQL.  Before we go on, it's worthwhile to mention that MongoDB defines itself explicity as noSQL, that is, the system we are about to learn for saving data is very different from Mongo.  While Mongo was defined by BSON, or Binary JSON, SQL organizes data into tables, rows, and columns.  OK, let's jump into it. -->
@@ -101,6 +103,7 @@ You are now connected to database "wdi" as user "your_user_name".
 wdi=#
 ```
 
+<!--WDI4 10:08 -->
 <!--10:10 WDI3 -->
 <!--10:00 10 minutes -->
 
@@ -145,6 +148,7 @@ wdi(#  NAME      TEXT                NOT NULL,
 
 <!--What does this remind you of from Mongo?  Schema! -->
 
+<!--WDI4 10:13 -->
 <!--10:10 10 minutes -->
 
 ## Create a student table and insert data - Independent Practice
@@ -187,6 +191,7 @@ CREATE TABLE
 -->
 
 <!--10:24 WDI3 -->
+<!--WDI4 10:22-->
 
 Great job! Now let's finally _insert_ some data into that table - remember what cannot be left blank!
 
@@ -243,6 +248,8 @@ INSERT 0 1
 ```
 -->
 
+<!--10:25 WDI4 turning over to devs -->
+<!--WDI4 coming back 10:33 -->
 <!--10:40 after solution WDI3 -->
 <!--10:30 15 minutes -->
 
@@ -288,6 +295,7 @@ wdi=# SELECT name, age FROM students;
 ```
 
 <!--10:47 WDI3 -->
+<!--WDI4 10:37 -->
 
 #### Getting more specific
 
@@ -344,6 +352,9 @@ wdi=# SELECT * FROM students WHERE address LIKE '%Fivetowns%';
 (2 rows)
 ```
 
+<!--10:41 WDI4 turning over to devs -->
+<!--WDI4 coming back 10:46 -->
+
 <!--10:56 WDI3 -->
 <!--10:45 10 minutes -->
 
@@ -392,6 +403,7 @@ wdi=# SELECT * FROM students;
 
 ```
 
+<!--WDI4 10:54 -->
 <!--11:04 WDI3, 11:06 to devs -->
 <!--10:55 15 minutes -->
 
@@ -411,6 +423,7 @@ There's _no way_ you're going to remember the exact syntax of everything we just
 - Get a list of students whose first name begins with the letter "J"
 - Get a list of student names who live in NY or MA
 
+<!--WDI4 11:07, ended 11:10 -->
 <!--11:10 5 minutes -->
 
 ## Conclusion
