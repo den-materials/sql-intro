@@ -107,6 +107,7 @@ You are now connected to database "wdi" as user "your_user_name".
 wdi=#
 ```
 
+<!--WDI5 10:08 -->
 <!--WDI4 10:08 -->
 <!--10:10 WDI3 -->
 <!--10:00 10 minutes -->
@@ -152,6 +153,7 @@ wdi(#  NAME      TEXT                NOT NULL,
 
 <!--What does this remind you of from Mongo?  Schema! -->
 
+<!--WDI5 10:17 -->
 <!--WDI4 10:13 -->
 <!--10:10 10 minutes -->
 
@@ -187,13 +189,14 @@ CREATE TABLE students (
 wdi=# CREATE TABLE students (
 wdi(#  ID          INT   PRIMARY KEY   NOT NULL,
 wdi(#  NAME        TEXT                NOT NULL,
-wdi(#  AGE         INT                 NOT NULL,
-wdi(#  ADDRESS     CHAR(50)
+wdi(#  AGE         INT                          ,
+wdi(#  ADDRESS     CHAR(50)             NOT NULL
 wdi(#  );
 CREATE TABLE
 ```
 -->
 
+<!--WDI5 10:21 -->
 <!--10:24 WDI3 -->
 <!--WDI4 10:22-->
 
@@ -217,6 +220,7 @@ wdi=# INSERT INTO students VALUES (1, 'Jack Sparrow', 28, '50 Main St, New York,
 INSERT 0 1
 ```
 
+<!--WDI5 10:27  -->
 <!--WDI3 10:29 -->
 <!--10:20 10 minutes -->
 
@@ -356,8 +360,9 @@ wdi=# SELECT * FROM students WHERE address LIKE '%Fivetowns%';
 (2 rows)
 ```
 
+<!--10:41 WDI5 turning over to devs -->
 <!--10:41 WDI4 turning over to devs -->
-<!--WDI4 coming back 10:46 -->
+<!--WDI4 coming back 10:46 --><!--WDI4 coming back 10:45 -->
 
 <!--10:56 WDI3 -->
 <!--10:45 10 minutes -->
@@ -408,6 +413,7 @@ wdi=# SELECT * FROM students;
 ```
 
 <!--WDI4 10:54 -->
+<!--WDI5 10:51 -->
 <!--11:04 WDI3, 11:06 to devs -->
 <!--10:55 15 minutes -->
 
@@ -427,6 +433,7 @@ There's _no way_ you're going to remember the exact syntax of everything we just
 - Get a list of students whose first name begins with the letter "J"
 - Get a list of student names who live in NY or MA
 
+<!--WDI5 11:05 after going through sol'ns -->
 <!--WDI4 11:07, ended 11:10 -->
 <!--11:10 5 minutes -->
 
@@ -447,5 +454,7 @@ Answer these questions:
 
 - How does SQL relate to relational databases?
 - What kinds of boolean and conditional operators can we use in SQL?
+
+<!--WDI5 11:11  -->
 
 <!--11:20 WDI3 -->
