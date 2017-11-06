@@ -8,6 +8,7 @@ creator:
 competencies: Databases
 --->
 
+<!--WDI5 9:54 -->
 <!--9:51 WDI3 -->
 <!--9:44 WDI4, lots of psql errors to quash, 9:59 to get back to this -->
 
@@ -58,6 +59,7 @@ Well, a database is just a repository to store the data and you need to use syst
 
 ...and all of these management systems use SQL (or some adaptation of it) as a language to manage data in the system.
 
+<!--10:01 WDI5 -->
 <!--9:59 WDI3 -->
 <!--9:50 10 minutes -->
 <!-- Actually 9:50 -->
@@ -83,6 +85,8 @@ your_user_name=#
 >Note: If you get an error about the `server running locally and accepting connections`, you may need to manually start `postgresql` with the following command: `postgres -D /usr/local/var/postgres`. (Think `mongod`, so you may need to start a new tab to continue with this lesson.)
 
 >Note: If running the above command gives you an error complaining about `database files are incompatible with the server` or similar, you may want to check out [this link](https://gist.github.com/giannisp/b53a76047b07751ed3ade3c1db1d2c51).
+
+>Note: If you’re seeing `FATAL: database _____ does not exist`, run `createdb` in your terminal.
 
 Great! You've entered the PostgreSQL equivalent of the node REPL: now, you can execute PSQL commands, or PostgreSQL's version of SQL.
 
