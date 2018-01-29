@@ -149,7 +149,7 @@ wdi(#  ID        INT   PRIMARY KEY   NOT NULL,
 wdi(#  NAME      TEXT                NOT NULL,
 ```
 
-...then, each line after denotes a new column we're going to create for this table, what the column will be called, the data type, whether it's a primary key, and whether the database - when data is added - can allow data without missing values.  In this case, we're not allowing NAME, AGE, or ID to be blank; but we're ok with website being blank.
+...then, each line after denotes a new column we're going to create for this table, what the column will be called, the data type, whether it's a primary key, and whether the database - when data is added - can allow data without missing values.  In this case, we're not allowing NAME, EXPERIENCE, or ID to be blank; but we're ok with website being blank.
 
 <!--What does this remind you of from Mongo?  Schema! -->
 
