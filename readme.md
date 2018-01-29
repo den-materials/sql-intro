@@ -120,7 +120,7 @@ Now that we have a database, let's create a table (think of this like, "hey now 
 CREATE TABLE instructors (
   ID  INT PRIMARY KEY NOT NULL,
   NAME TEXT NOT NULL,
-  EXPERIENCE INT NOT NULL,
+  AGE INT NOT NULL,
   WEBSITE CHAR(50)
 );
 ```
@@ -131,7 +131,7 @@ When we paste this into psql:
 wdi=# CREATE TABLE instructors (
 wdi(#  ID          INT   PRIMARY KEY   NOT NULL,
 wdi(#  NAME        TEXT                NOT NULL,
-wdi(#  EXPERIENCE  INT                 NOT NULL,
+wdi(#  AGE  INT                 NOT NULL,
 wdi(#  WEBSITE     CHAR(50)
 wdi(#  );
 CREATE TABLE
@@ -149,7 +149,7 @@ wdi(#  ID        INT   PRIMARY KEY   NOT NULL,
 wdi(#  NAME      TEXT                NOT NULL,
 ```
 
-...then, each line after denotes a new column we're going to create for this table, what the column will be called, the data type, whether it's a primary key, and whether the database - when data is added - can allow data without missing values.  In this case, we're not allowing NAME, EXPERIENCE, or ID to be blank; but we're ok with website being blank.
+...then, each line after denotes a new column we're going to create for this table, what the column will be called, the data type, whether it's a primary key, and whether the database - when data is added - can allow data without missing values.  In this case, we're not allowing NAME, AGE, or ID to be blank; but we're ok with website being blank.
 
 <!--What does this remind you of from Mongo?  Schema! -->
 
