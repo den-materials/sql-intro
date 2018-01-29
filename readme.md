@@ -11,6 +11,7 @@ competencies: Databases
 <!--WDI5 9:54 -->
 <!--9:51 WDI3 -->
 <!--9:44 WDI4, lots of psql errors to quash, 9:59 to get back to this -->
+<!-- 9:46 WDI6 -->
 
 <!--9:40 10 minutes -->
 
@@ -156,6 +157,7 @@ wdi(#  NAME      TEXT                NOT NULL,
 <!--WDI5 10:17 -->
 <!--WDI4 10:13 -->
 <!--10:10 10 minutes -->
+<!-- WDI6 10:17 passing to devs -->
 
 ## Create a student table and insert data - Independent Practice
 
@@ -199,6 +201,7 @@ CREATE TABLE
 <!--WDI5 10:21 -->
 <!--10:24 WDI3 -->
 <!--WDI4 10:22-->
+<!-- WDI6 10:23 resuming -->
 
 Great job! Now let's finally _insert_ some data into that table - remember what cannot be left blank!
 
@@ -223,6 +226,7 @@ INSERT 0 1
 <!--WDI5 10:27  -->
 <!--WDI3 10:29 -->
 <!--10:20 10 minutes -->
+<!-- WDI6 10:30 passing to devs -->
 
 ## Insert Data - Independent Practice
 
@@ -304,6 +308,7 @@ wdi=# SELECT name, age FROM students;
 
 <!--10:47 WDI3 -->
 <!--WDI4 10:37 -->
+<!--WDI6 10:44 passing to devs -->
 
 #### Getting more specific
 
@@ -382,6 +387,8 @@ But oh no, we messed them up - Miss Take doesn't live at asdfasdfasdf, she lives
 wdi=# UPDATE students SET address = '100 Main St., New York, NY' WHERE address = 'asdfasdfasdf';
 UPDATE 1
 
+<!-- WDI6 10:55 handed to devs -->
+
 wdi=# SELECT * FROM students;
  id |      name      | age |                      address
 ----+----------------+-----+----------------------------------------------------
@@ -416,6 +423,7 @@ wdi=# SELECT * FROM students;
 <!--WDI5 10:51 -->
 <!--11:04 WDI3, 11:06 to devs -->
 <!--10:55 15 minutes -->
+<!--11:03 10 minutes -->
 
 ## Independent Practice
 
